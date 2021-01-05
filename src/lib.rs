@@ -24,7 +24,7 @@ impl CommitType {
             },
             CommitType {
                 text: "style",
-                description: "Changes that do not affect the meaning of the code(white-space, fomatting, missing semi-colons, etc)"
+                description: "Changes that do not affect the meaning of the code (white-space, fomatting, missing semi-colons, etc)"
             },
             CommitType {
                 text: "refactor",
@@ -36,11 +36,11 @@ impl CommitType {
             },
             CommitType {
                 text: "test",
-                description: "Adding missing tests"
+                description: "Added, modified or removed tests"
             },
             CommitType {
                 text: "chore",
-                description: "Change to the build process or auxiliary tools and libraries such as documentation generation"
+                description: "Change to the build process, auxiliary tools, libraries or CI"
             },
         ]
     }
