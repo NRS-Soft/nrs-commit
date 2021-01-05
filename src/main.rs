@@ -1,7 +1,6 @@
 use commit::{
+    get_optional_commit_body_and_footer, put_together_commit_message, put_together_first_line,
     CommitType,
-    get_optional_commit_body_and_footer,
-    put_together_commit_message
 };
 use console::Term;
 use dialoguer::{theme::ColorfulTheme, Input, Select};
@@ -28,16 +27,17 @@ fn main() -> std::io::Result<()> {
     let subject: String = Input::new()
         .with_prompt("A short description for your commit")
         .validate_with(|input: &String| -> Result<(), &str> {
-            if input.len() < 50 {
+            if commit_type.text.len() + scope.len() + input.len() < 50 {
                 Ok(())
             } else {
-                Err("The commit message should be less than 50 characters long")
+                Err("First line of commit should be less than 50")
             }
         })
         .interact_text()?;
 
+    let first_line = put_together_first_line(commit_type, scope, subject);
     let other = get_optional_commit_body_and_footer();
-    let commit_message = put_together_commit_message(commit_type, scope, subject, other);
+    let commit_message = put_together_commit_message(first_line, other);
 
     Command::new("git")
         .args(&["commit", "-m", &commit_message])
