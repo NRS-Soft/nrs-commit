@@ -1,10 +1,43 @@
-# NRS Committer 
+# nrs-commit
 
-A Rust version [commitizen](https://github.com/commitizen-tools/commitizen).
-This is a fork of [commit-formatter](https://github.com/Eliot00/commit-formatter)
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+TODO: Put more badges here.
+
+A CLI tool to help you write git commit
+
+TODO: Fill out this long description.
+
+## Table of Contents
+
+- [Install](#install)
+- [Usage](#usage)
+- [Maintainers](#maintainers)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Install
+
+```
+cargo install nrs-commit
+```
 
 ## Usage
 
-If you have `Cargo`, just run `cargo install nrs-commit` to install the binary package.
+```
+git add <files or folders>
+nrs-commit
+```
 
-If you get a error: 'command not found: nrs-commit', maybe you need to add cargo installation directory to PATH.
+## Maintainers
+
+[@sebastinez](https://github.com/sebastinez)
+
+## Contributing
+
+
+
+Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
+
+## License
+
+MIT © 2021 NRS
