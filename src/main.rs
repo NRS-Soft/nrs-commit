@@ -27,6 +27,13 @@ fn main() -> std::io::Result<()> {
 
     let subject: String = Input::new()
         .with_prompt("A short description for your commit")
+        .validate_with(|input: &String| -> Result<(), &str> {
+            if input.len() < 50 {
+                Ok(())
+            } else {
+                Err("The commit message should be less than 50 characters long")
+            }
+        })
         .interact_text()?;
 
     let other = get_optional_commit_body_and_footer();
