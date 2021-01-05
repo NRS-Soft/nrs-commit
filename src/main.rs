@@ -1,4 +1,4 @@
-use nrs_commit::{
+use commit::{
     CommitType,
     get_optional_commit_body_and_footer,
     put_together_commit_message

@@ -17,5 +17,5 @@ console = "0.13.0"
 dialoguer = "0.7.1"
 
 [lib]
-name = "nrs_commit"
+name = "commit"
 path = "src/lib.rs"
