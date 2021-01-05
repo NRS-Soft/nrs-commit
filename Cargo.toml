@@ -2,7 +2,7 @@
 name = "nrs-commit"
 version = "0.1.0"
 authors = ["Sebastian Martinez <smartinez@nuclearis.com>"]
-edition = "2020"
+edition = "2018"
 description = "A CLI tool to help you write git commit"
 homepage = "https://github.com/NRS-Soft/nrs-commit"
 repository = "https://github.com/NRS-Soft/nrs-commit"
