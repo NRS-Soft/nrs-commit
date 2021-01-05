@@ -79,7 +79,7 @@ pub fn put_together_commit_message(
     } else {
         format_commit_message.push_str(&format!("({}): ", scope));
     }
-    format_commit_message.push_str(&subject);
+    format_commit_message.push_str(&subject.to_lowercase());
     if let Some(text) = optional_body_and_footer {
         format_commit_message.push_str(&format!("\n\n{}", text));
     }
