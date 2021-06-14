@@ -2,8 +2,7 @@ use commit::{
     get_optional_commit_body_and_footer, put_together_commit_message, put_together_first_line,
     CommitType,
 };
-use console::Term;
-use dialoguer::{theme::ColorfulTheme, Input, Select};
+use dialoguer::{console::Term, theme::ColorfulTheme, Input, Select};
 use std::process::Command;
 
 fn main() -> std::io::Result<()> {
